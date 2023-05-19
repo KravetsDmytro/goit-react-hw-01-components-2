@@ -1,27 +1,28 @@
+import css from './transactionHistory.module.css';
 
+function TransactionHistory ({items}){
+  return(
 
-function TransactionHistory (){return(
-<table class="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+<table className={css['transaction-history']}>
+  <thead  className={css['transaction-head']} >
+    <tr className=''>
+      <th className=''>Type</th>
+      <th className=''>Amount</th>
+      <th className=''>Currency</th>
+    </tr >
+  </thead >
+{items.map(item=>
+  <tbody className=''>
+    <tr className=''>
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
+      <td className='' key={item.id}>{item.type}</td>
+      <td className=''>{item.amount}</td>
+      <td className=''>{item.currency}</td>
     </tr>
   </tbody>
+
+)
+  }
 </table>
 
 
