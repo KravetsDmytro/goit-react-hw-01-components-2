@@ -48,11 +48,13 @@
 .online {
   composes: status;
   background-color: #4caf50;
+  color:aliceblue;
 }
 
 .offline {
   composes: status;
   background-color: #f44336;
+  color:yellow;
 }
 
 .avatar {
